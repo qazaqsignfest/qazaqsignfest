@@ -554,6 +554,62 @@
             max-height: 250px;
         }
 
+        /* Photo Upload Section */
+        .photo-upload {
+            background: var(--surface);
+            text-align: center;
+        }
+
+        .photo-upload-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .photo-upload p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: var(--text);
+        }
+
+        .photo-upload-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--surface);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .photo-upload-btn:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Festival Map Section */
+        .festival-map {
+            background: var(--surface-light);
+        }
+
+        .map-frame {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--surface);
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            border: 2px solid var(--accent);
+        }
+
+        .map-frame img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
         /* Footer */
         footer {
             background: var(--surface);
@@ -679,12 +735,12 @@
             }
         }
 
-        .nagima{
+        .nagima {
             scale: 0.27;
             margin-top: 0.7em;
         }
 
-        .diana{
+        .diana {
             scale: 0.35;
             margin-top: 1em;
             margin-right: 0.1em;
@@ -930,6 +986,25 @@
         </div>
     </section>
 
+    <section class="photo-upload" id="photo-upload">
+        <div class="container">
+            <h2 class="section-title" data-i18n="section_photo_upload">Поделитесь своими фотографиями</h2>
+            <div class="photo-upload-content">
+                <p data-i18n="photo_upload_desc">С помощью этой кнопки Вы можете загрузить сюда свои фотографии с фестиваля и поделиться яркими воспоминаниями с нами!</p>
+                <a href="https://event.luniq.net/pn88c48v2oqw5897u7z285h2" class="photo-upload-btn" data-i18n="photo_upload_btn">Загрузить фотографии</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="festival-map" id="festival-map">
+        <div class="container">
+            <h2 class="section-title" data-i18n="section_festival_map">Схема фестиваля</h2>
+            <div class="map-frame">
+                <img src="photos/3.png" alt="Festival Map">
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -1005,7 +1080,7 @@
                 program_poetry: "Поэзия глухих",
                 program_photo: "Фотовыставка \"Жизнь глухих\"",
                 program_kids: "Детский уголок",
-                program_drinks: "Зона напитков",
+                program_drinks: "З Lewis: 1",
                 program_photobooth: "Фотобудка",
                 program_closing: "Закрытие, фото, нетворкинг",
                 program_closing_desc: "Общее фото, обмен контактами и планирование будущих встреч",
@@ -1039,7 +1114,11 @@
                 footer_contacts: "Контакты",
                 footer_social: "Соцсети",
                 footer_about: "О нас",
-                footer_about_text: "QazaqSignFest — фестиваль, объединяющий сообщество для инклюзии и осведомлённости."
+                footer_about_text: "QazaqSignFest — фестиваль, объединяющий сообщество для инклюзии и осведомлённости.",
+                section_photo_upload: "Поделитесь своими фотографиями",
+                photo_upload_desc: "С помощью этой кнопки Вы можете загрузить сюда свои фотографии с фестиваля и поделиться яркими воспоминаниями с нами!",
+                photo_upload_btn: "Загрузить фотографии",
+                section_festival_map: "Схема фестиваля"
             },
             en: {
                 title: "QazaqSignFest — Sign Language Festival | August 30, Astana",
@@ -1125,7 +1204,11 @@
                 footer_contacts: "Contacts",
                 footer_social: "Social Media",
                 footer_about: "About Us",
-                footer_about_text: "QazaqSignFest is a festival uniting the community for inclusion and awareness."
+                footer_about_text: "QazaqSignFest is a festival uniting the community for inclusion and awareness.",
+                section_photo_upload: "Share Your Photos",
+                photo_upload_desc: "Use this button to upload your festival photos and share your vivid memories with us!",
+                photo_upload_btn: "Upload Photos",
+                section_festival_map: "Festival Map"
             },
             kk: {
                 title: "QazaqSignFest — Ым тілі фестивалі | 30 тамыз, Астана",
@@ -1154,7 +1237,7 @@
                 program_opening: "Фестивальдің ашылуы",
                 program_opening_desc: "Қарсы алу материалдарын алу",
                 program_networking: "Қарсы алу нетворкингі",
-                program_networking_desc: "Ұйымдастырушылар мен құрметті қонақтардың алғы сөздері",
+                program_networking_desc: "Ұйымдастырушылар мен құрметті қонақтардың alғы сөздері",
                 program_dactyl: "Шеберлік сабағы: Дактиль",
                 program_dactyl_desc: "Өз атыңызды дактильмен жазуды интерактивті үйрену",
                 program_clay: "Шеберлік сабағы: Балшық терапиясы",
@@ -1211,7 +1294,11 @@
                 footer_contacts: "Байланыстар",
                 footer_social: "Әлеуметтік желілер",
                 footer_about: "Біз туралы",
-                footer_about_text: "QazaqSignFest — инклюзия және хабардарлық үшін қауымдастықты біріктіретін фестиваль."
+                footer_about_text: "QazaqSignFest — инклюзия және хабардарлық үшін қауымдастықты біріктіретін фестиваль.",
+                section_photo_upload: "Фотосуреттеріңізбен бөлісіңіз",
+                photo_upload_desc: "Осы батырманың көмегімен сіз фестивальден түсірілген фотосуреттеріңізді осында жүктей алып, бізбен жарқын естеліктермен бөлісе аласыз!",
+                photo_upload_btn: "Фотосуреттерді жүктеу",
+                section_festival_map: "Фестиваль схемасы"
             }
         };
 
@@ -1283,7 +1370,7 @@
             document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
             document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
 
-            if (distance < 0) {
+            if (distance < nil) {
                 document.getElementById('countdown').innerHTML = '<p data-i18n="event_started">Фестиваль начался!</p>';
                 setLanguage(document.documentElement.lang);
                 clearInterval(countdownInterval);
