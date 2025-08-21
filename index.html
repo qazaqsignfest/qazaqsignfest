@@ -11,7 +11,7 @@
     <meta property="og:type" content="event">
     <meta property="og:url" content="https://yourusername.github.io/qazaqsignfest">
     <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=QazaqSignFest">
-    <link rel="icon" href="https://via.placeholder.com/32x32.png?text=QSF" type="image/png">
+    <link rel="icon" href="photos/4.png" type="image/png">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -113,15 +113,6 @@
             color: var(--accent);
         }
 
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            color: var(--text);
-            cursor: pointer;
-        }
-
         .lang-selector {
             position: relative;
             display: inline-block;
@@ -147,10 +138,13 @@
             position: absolute;
             top: 100%;
             right: 0;
-            background: var(--surface);
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            background: var(--surface-light);
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             z-index: 1000;
+            padding: 8px 0;
+            min-width: 150px;
+            border: 1px solid var(--accent);
         }
 
         .lang-selector:hover .lang-dropdown {
@@ -158,17 +152,17 @@
         }
 
         .lang-option {
-            padding: 8px 16px;
-            color: var(--text);
+            padding: 12px 16px;
+            color: var(--surface);
             text-decoration: none;
             display: block;
-            font-size: 0.9rem;
-            transition: background 0.3s ease;
+            font-size: 0.95rem;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
         .lang-option:hover {
             background: var(--accent);
-            color: var(--surface);
+            color: var(--text);
         }
 
         /* Hero Section */
@@ -672,29 +666,33 @@
 
         /* Mobile Styles */
         @media (max-width: 768px) {
-            .nav-links {
-                position: fixed;
-                top: 0;
-                left: -100%;
-                width: 100%;
-                height: 100vh;
-                background: var(--surface);
+            .nav-container {
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                transition: left 0.3s ease;
+                align-items: flex-start;
             }
 
-            .nav-links.active {
-                left: 0;
+            .nav-links {
+                flex-direction: column;
+                gap: 16px;
+                margin-top: 16px;
+                width: 100%;
+                padding: 0;
             }
 
-            .mobile-menu-btn {
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links a {
+                font-size: 1.1rem;
+                padding: 8px 0;
                 display: block;
             }
 
             .lang-selector {
-                margin-top: 1rem;
+                margin-top: 16px;
+                align-self: center;
             }
 
             .hero h1 {
@@ -732,6 +730,23 @@
 
             .timeline-item::before {
                 display: none;
+            }
+
+            .speakers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .accessibility-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-question {
+                font-size: 1rem;
+            }
+
+            .photo-upload-btn {
+                font-size: 1rem;
+                padding: 0.8rem 1.5rem;
             }
         }
 
@@ -773,7 +788,6 @@
                         <a href="#" class="lang-option" data-lang="kk">Қазақша</a>
                     </div>
                 </div>
-                <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
             </div>
         </div>
     </nav>
@@ -1080,13 +1094,13 @@
                 program_poetry: "Поэзия глухих",
                 program_photo: "Фотовыставка \"Жизнь глухих\"",
                 program_kids: "Детский уголок",
-                program_drinks: "З Lewis: 1",
+                program_drinks: "Зона напитков",
                 program_photobooth: "Фотобудка",
                 program_closing: "Закрытие, фото, нетворкинг",
                 program_closing_desc: "Общее фото, обмен контактами и планирование будущих встреч",
                 section_speakers: "Ведущие",
                 speaker_1_role: "Автор популярного блога в \"Instagram\"",
-                speaker_1_desc: "Опытная ведущая мероприятий и активист",
+                speaker_1_desc: "Instagram-блогер, инфлюенсер, автор оригинального контента, резидент «Brave Talents»",
                 speaker_2_role: "Ребенок CODA, cертифицированный переводчик жестового языка",
                 speaker_2_desc: "Профессиональный переводчик жестового языка с 5-летним стажем",
                 section_access: "Доступность",
@@ -1176,7 +1190,7 @@
                 program_closing_desc: "Group photo, exchanging contacts, and planning future meetings",
                 section_speakers: "Speakers",
                 speaker_1_role: "Author of a popular Instagram blog",
-                speaker_1_desc: "Experienced event host and activist",
+                speaker_1_desc: "Instagram blogger, influencer, original content creator, resident of «Brave Talents»",
                 speaker_2_role: "CODA, certified sign language interpreter",
                 speaker_2_desc: "Professional sign language interpreter with 5 years of experience",
                 section_access: "Accessibility",
@@ -1266,7 +1280,7 @@
                 program_closing_desc: "Топтық фото, байланыс алмасу және болашақ кездесулерді жоспарлау",
                 section_speakers: "Спикерлер",
                 speaker_1_role: "\"Instagram\"-дағы танымал блог авторы",
-                speaker_1_desc: "Іс-шаралардың тәжірибелі жүргізушісі және белсенді",
+                speaker_1_desc: "Instagram блогері, инфлюенсер, түпнұсқа контент авторы, «Brave Talents» резиденті",
                 speaker_2_role: "CODA, сертификатталған ым тілі аудармашысы",
                 speaker_2_desc: "5 жылдық тәжірибесі бар кәсіби ым тілі аудармашысы",
                 section_access: "Қолжетімділік",
@@ -1338,14 +1352,6 @@
             });
         });
 
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const navLinks = document.getElementById('nav-links');
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.textContent = navLinks.classList.contains('active') ? '✖' : '☰';
-        });
-
         // FAQ toggle
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
@@ -1370,7 +1376,7 @@
             document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
             document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
 
-            if (distance < nil) {
+            if (distance < 0) {
                 document.getElementById('countdown').innerHTML = '<p data-i18n="event_started">Фестиваль начался!</p>';
                 setLanguage(document.documentElement.lang);
                 clearInterval(countdownInterval);
