@@ -628,20 +628,15 @@ footer {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    nav{
-        display: none;
-    }
     .nav-container {
         flex-direction: column;
         align-items: flex-start;
     }
 
+    .nav
+
     .nav-links {
-        flex-direction: column;
-        gap: 16px;
-        margin-top: 16px;
-        width: 100%;
-        padding: 0;
+        display: none;
     }
 
     .nav-links li {
