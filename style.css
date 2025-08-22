@@ -628,8 +628,8 @@ footer {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+    
     .nav-container {
-        flex-direction: column;
         align-items: flex-start;
     }
 
@@ -649,7 +649,6 @@ footer {
     }
 
     .lang-selector {
-        margin-top: 16px;
         align-self: center;
     }
 
