@@ -633,10 +633,8 @@ footer {
         align-items: flex-start;
     }
 
-    .nav
-
     .nav-links {
-        display: none;
+        display: none !important; 
     }
 
     .nav-links li {
